@@ -1,0 +1,307 @@
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background-color: #e8eef4;
+  color: #1e293b;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.header {
+  margin: 40px 0;
+}
+
+.header__avatar {
+  display: block;
+  width: 180px;
+  height: 180px;
+  margin: 0 auto 20px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center 20%;
+  border: 4px solid #ffffff;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.header__title {
+  margin: 30px 0 10px 0;
+  font-size: 32px;
+  line-height: 1.2;
+  font-family: "Segoe UI", Arial, sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  color: #1e293b;
+  text-align: center;
+}
+
+.header__subtitle {
+  color: #475569;
+  font-size: 16px;
+  font-style: italic;
+  font-weight: 500;
+  line-height: 1.6;
+  text-align: center;
+
+  background: #ffffff;
+  border-left: 4px solid #2563eb;
+  border-radius: 10px;
+
+  padding: 12px 18px;
+  margin: 15px auto 0;
+
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.links {
+  width: 320px;
+  margin-bottom: 40px;
+}
+
+.links__header {
+  font-family: "Segoe UI", Arial, sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1.4;
+  margin: 0 0 15px 0;
+  text-align: center;
+}
+
+.links__container {
+  list-style-type: none;
+  background: #ffffff;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 20px 20px 10px;
+  gap: 10px;
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+  box-sizing: border-box;
+  margin: 0;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+}
+
+.links__link,
+.links__title {
+  font-size: 14px;
+}
+
+.links__link {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 0px 0px 10px;
+  gap: 10px;
+  border-bottom: 1px solid #dadada;
+  width: 100%;
+}
+
+.links__link:last-child {
+  border-bottom: none;
+}
+
+.linsk__link,
+.linsk__link:visited {
+  text-decoration: none;
+  color: #2563eb;
+  transition: color 0.2s ease;
+}
+
+
+.linsk__link {
+  display: inline-block;
+  flex: 1;
+  min-width: 0;
+  padding: 5px 6px;
+  border-radius: 8px;
+  box-sizing: border-box;
+  overflow-wrap: anywhere;
+  transition: all 0.25s ease;
+}
+
+.linsk__link:hover {
+  color: #1d4ed8;
+  background-color: #eff6ff;
+  box-shadow: inset 0 0 0 1px #bfdbfe;
+}
+
+.linsk__link::after {
+  content: " ↗";
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+.linsk__link:hover::after {
+  opacity: 1;
+}
+
+
+
+.links__title {
+  margin: 0;
+  min-width: 110px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+footer {
+  margin: 0 0 40px 0;
+}
+.button-link {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  width: 320px;
+  background: #2563eb;
+  border-radius: 20px;
+
+  font-size: 14px;
+  line-height: 1.4;
+
+  color: #ffffff;
+  text-decoration: none;
+}
+.button-link {
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.button-link:hover {
+  background: #1d4ed8;
+  transform: translateY(-2px);
+}
+
+/* Всплывающее окно с кредо */
+
+.credo-modal {
+  width: min(90%, 380px);
+  padding: 35px 25px;
+  border: none;
+  border-radius: 20px;
+
+  background: #ffffff;
+  color: #1e293b;
+  text-align: center;
+
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+}
+
+/* Затемнение фона */
+
+.credo-modal::backdrop {
+  background: rgba(15, 23, 42, 0.55);
+  backdrop-filter: blur(5px);
+}
+
+/* Анимация появления */
+
+.credo-modal[open] {
+  animation: modalAppear 0.3s ease;
+}
+
+@keyframes modalAppear {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.95);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Крестик закрытия */
+
+.credo-close {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+
+  border: none;
+  background: none;
+  color: #64748b;
+
+  font-size: 28px;
+  cursor: pointer;
+}
+
+.credo-close:hover {
+  color: #2563eb;
+}
+
+/* Значок цитаты */
+
+.credo-icon {
+  color: #2563eb;
+  font-size: 48px;
+  line-height: 1;
+}
+
+/* Заголовок */
+
+.credo-modal h2 {
+  font-size: 24px;
+  margin: 15px 0;
+}
+
+/* Текст цитаты */
+
+.credo-modal p {
+  font-size: 18px;
+  font-style: italic;
+  line-height: 1.6;
+  color: #475569;
+}
+
+/* Размер иконок */
+.links__title i {
+  font-size: 18px;
+  margin-right: 6px;
+  vertical-align: -2px;
+}
+
+/* Telegram */
+.bi-telegram {
+  color: #229ED9;
+}
+
+/* Instagram */
+.bi-instagram {
+  color: #E1306C;
+}
+
+/* Электронная почта */
+.bi-envelope-fill {
+  color: #64748B;
+}
+
+/* Иконки увлечений */
+
+.bi-activity {
+  color: #e78a24;
+}
+
+.bi-car-front-fill {
+  color: #2563eb;
+}
+
+.bi-controller {
+  color: #8b5cf6;
+}
+
+.bi-mortarboard-fill {
+  color: #16a34a;
+}
+.linsk__link[href^="mailto:"]::after {
+  content: none;
+}

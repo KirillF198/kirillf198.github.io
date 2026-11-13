@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./normalize.css" rel="stylesheet" />
+    <link href="./style.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <title>Document</title>
+  </head>
+  <body>
+    <header class="header">
+      <img src="./me.png" alt="avatar" class="header__avatar" />
+      <h1 class="header__title"> Кирилл Фирсов</h1>
+      <h3 class="header__subtitle">"Маленькими шагами к великому будущему"</h3>
+    </header>
+    <main>
+      <section class="links">
+        <h2 class="links__header">Доступен</h2>
+        <ul class="links__container">
+          <li class="links__link">
+            <p class="links__title"><i class="bi bi-telegram"></i> Telegram</p>
+            <a class="linsk__link" href="http://t.me/damagion">@damagion</a>
+          </li>
+          <li class="links__link">
+            <p class="links__title"><i class="bi bi-envelope-fill"></i> Эл. почта</p>
+            <a class="linsk__link" href="mailto:damagion@yandex.ru"
+              >damagion@yandex.ru</a
+            >
+          </li>
+          <li class="links__link">
+            <p class="links__title"><i class="bi bi-instagram"></i> Instagram</p>
+            <a class="linsk__link" href="https://www.instagram.com/k.firsv?srtk=MXJ0NnAyaHdpenU0dA%3D%3D&utm_source=qr"
+              >k.firsv</a
+            >
+          </li>
+        </ul>
+      </section>
+      <section class="links">
+        <h2 class="links__header">Чем люблю заниматься?</h2>
+        <ul class="links__container">
+          <li class="links__link">
+            <p class="links__title"><i class="bi bi-activity"></i> Тренируюсь</p>
+            <a class="linsk__link" href="https://maps.app.goo.gl/nKiVZZRqE4a951peA">в Retro Athletic Club в Дананге</a>
+          </li>
+          <li class="links__link">
+            <p class="links__title"><i class="bi bi-car-front-fill"></i> Езжу</p>
+            <a class="linsk__link" href="https://www.drive2.ru/users/damagion/">на Audi</a>
+          </li>
+          <li class="links__link">
+            <p class="links__title"><i class="bi bi-controller"></i> Играю</p>
+            <a class="linsk__link" href="https://www.playstation.com/en-vn/?srsltid=AYCX9vKshCk_KQZz4Sfsg-gaAUT1r5A1rPCiPFwJXSGKhFLAGUDV8U2i">в Playstation 5</a>
+          </li>
+          <li class="links__link">
+            <p class="links__title"><i class="bi bi-mortarboard-fill"></i> Учусь</p>
+            <a class="linsk__link" href="https://qa.studio//">на QA Engineer</a>
+          </li>
+        </ul>
+      </section>
+    </main>
+    
+<footer>
+  <button type="button" class="button-link">
+    Кредо
+  </button>
+</footer>
+<!-- Всплывающее окно -->
+<dialog class="credo-modal" id="credo-modal">
+  <button type="button" class="credo-close"
+          aria-label="Закрыть окно">×</button>
+
+
+  <p>«О чем думаешь, то и притягиваешь»</p>
+</dialog>
+
+<script src="js.js"></script>
+</body>
+</html>
